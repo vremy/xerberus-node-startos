@@ -1,4 +1,4 @@
-FROM ghcr.io/xerberusteam/xerberus-node:full-node-latest
+FROM --platform=linux/arm64 ghcr.io/xerberusteam/xerberus-node:full-node-latest
 RUN apt-get update && apt-get install -y tini
 RUN chmod +x /usr/bin/xerberus-net
 ADD ./docker_entrypoint.sh /usr/local/bin/docker_entrypoint.sh
